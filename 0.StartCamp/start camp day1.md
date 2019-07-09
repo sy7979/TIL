@@ -1,0 +1,1 @@
+smart camp day1
