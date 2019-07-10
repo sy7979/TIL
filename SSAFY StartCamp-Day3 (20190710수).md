@@ -2,7 +2,9 @@
 
 
 
-초록색 u : untrackted 아직 깃에 업로드 되지 않았다.
+git.bash에서
+
+초록색 U : untrackted 아직 깃에 업로드 되지 않았다.
 
 w = write
 
@@ -10,16 +12,20 @@ w = write
 
 #### 파일 만들기
 
+```python
 f = open('student.txt', 'w')
 
 f.write("안녕하세요")
 
 f.close()
 
+
+```
+
+```python
 student@DESKTOP MINGW64 ~/startcamp/file (master)
 $ python make_file.py
-
-
+```
 
 @@ ctrl + / 하면 주석처리 되서 실행이 되지 않는다
 
@@ -28,16 +34,16 @@ $ python make_file.py
 #### with open(A) as f : 오픈으로 열린 A파일을 f라고 부르겠다.
 
 
-
-#### csv comma seperated values
+#### csv 
+comma seperated values
 
 각 라인의 컬럼들이 콤마로 분리된 텍스트 파일 포맷
 
-엑셀처럼 데이터 표로 정리해주는//
+엑셀처럼 데이터 표로 정리해주는 기능
 
 
 
-lunch 는 딕셔너리. 정의데이터 만들떄 사용
+lunch 는 딕셔너리. 정의데이터 만들때 사용
 
 
 
@@ -47,9 +53,7 @@ lunch 는 딕셔너리. 정의데이터 만들떄 사용
 
 
 
-
-
-text보다 csv 형식으로 데이터를 저장하는게, 다루기가 더 쉽다.
+*text보다 csv 형식으로 데이터를 저장하는게, 다루기가 더 쉽다.*
 
 
 
@@ -85,11 +89,19 @@ with open("lunch.csv", 'w', encoding="utf-8", newline="") as f:
 
 ![1562727606898](C:\Users\student\AppData\Roaming\Typora\typora-user-images\1562727606898.png)
 
+예쁘게 정리 가능!
 
 
-#### exchange_csv.py
 
-코인 이름 현 가격 csv 형식으로 가져오기
+### crawling + csv
+
+크롤링한 정보를 csv로 보기 편하게 구성해보자
+
+
+
+##### 1. exchange_csv.py
+
+환율 csv형식으로 가져오기
 
 웹에서 크롤링을 할 때 html을 이해하는것이 우선이에요!
 
@@ -115,7 +127,9 @@ with open("naver_exchange.csv", 'w', encoding='utf-8', newline="") as f:
 
 
 
-#### csv_bittumb.py
+##### 2. csv_bittumb.py
+
+코인 이름 현 가격 csv 형식으로 가져오기
 
 ```python
 import csv
@@ -138,13 +152,17 @@ with open("bithumb.csv", 'w', encoding='utf-8', newline="") as f:
 
 ```
 
+코인의 종류를 나타내는 정보의 class가 안떠서 r.select_one()에 입력할 수 없었음,
+
+html의 구성을 이해해야 이 문제를 해결할 수 있다는데,, 어떻게 해야할까???
 
 
-#### csv_flightticket.py
 
-실행 안 됌
+##### 3. csv_flightticket.py
 
-..  세 가지 정보가 동시에 뜨게 하고 싶었는데,,
+실행 안 됌ㅜㅜㅜㅜ
+
+..  세 가지 정보가 동시에 뜨게 하고 싶었는데,, 머가 문제일까??
 
 ```python
 import csv
@@ -191,27 +209,25 @@ with open("airseoul.csv", 'w', encoding='utf-8', newline="") as f:
 
 
 
+HTML이란? 어떤 글자를 적기위한 문서
+
+​	(HTML을 사람들이 보기 좋게 하는 것이 웹브라우져)
+
+​	파일을 실행시키면 연결프로그램으로 크롬 등을 연결 시킬 수 있다
+
+​	Hypertext를 만드는 언어, 일반 text보다 한 단계 위의 기능을 포함한 text.
+
+​	문서를 표기하기 위한 언어, 글의 순서와는 상관 없이, 단어를 클릭하면  **link**로 문서와 문서가 바로 연결 되게끔 	한다.
 
 
-어떤 글자를 적기위한 문서
-
-(이걸 사람들이 보기 좋게 하는 것이 웹브라우져)
-
-파일을 실행시키면 연결프로그램으로 크롬 등을 연결 시킬 수 있다
-
-hypertext를 만드는 언어, 일반 text보다 한 단계 위의 기능을 포함한 text.
-
-문서를 표기하기 위한 언어, 순서와는 상관 없이, 단어를 클릭하면  link로 문서와 문서가 바로 연결 되게끔
 
 html은 여는태그(<h1>)와 닫는 태그(</h1>)로 구성이 된다.
 
-href :hypertext reference
-
-a : 닻
-
 h1 : 대제목 
 
-a : 링크를 연결시켜준다. 
+href :hypertext reference 
+
+a : anchor (닻)링크를 연결시켜준다. 
 
 
 
