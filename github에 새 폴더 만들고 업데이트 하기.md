@@ -26,3 +26,16 @@ $ git push origin master
 
 ```
 
+```
+student@DESKTOP MINGW64 ~/TIL (master)
+$ git add .
+
+student@DESKTOP MINGW64 ~/TIL (master)
+$ git commit -m 'addfile'
+
+
+student@DESKTOP MINGW64 ~/TIL (master)
+$ git push origin master
+
+```
+
