@@ -39,3 +39,26 @@ $ git push origin master
 
 ```
 
+
+
+
+
+폴더 삭제하기
+
+```
+student@DESKTOP MINGW64 ~/homeworkshop (master)
+$ rm -rf .git
+
+student@DESKTOP MINGW64 ~/homeworkshop
+$ git init
+
+student@DESKTOP MINGW64 ~/homeworkshop (master)
+$ git add .
+
+student@DESKTOP MINGW64 ~/homeworkshop (master)
+$ git commit -m "add file"
+
+student@DESKTOP MINGW64 ~/homeworkshop (master)
+
+```
+
