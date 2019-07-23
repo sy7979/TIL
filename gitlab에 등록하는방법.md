@@ -1,6 +1,8 @@
-gitlab에 등록하는방법
+### gitlab에 등록하는방법
 
 
+
+1. 초기 설정
 
 ```python
 student@DESKTOP MINGW64 ~/homeworkshop (master)
@@ -24,5 +26,15 @@ student@DESKTOP MINGW64 ~/project/pjt01 (master)
 $ git push gitlab master
 
 
+```
+
+
+2. 그 다음부터..
+```python
+git add .
+
+git commit -m'add file'
+
+git push gitlab master
 ```
 
