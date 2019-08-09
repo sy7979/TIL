@@ -1,8 +1,14 @@
 ### 장고를 위한 특별한 환경 만들기
 
+다른 프로그램들은 없고 장고만 있는 환경을 만들어야한다.
 
+왜? 웹서버의 다른 프로그램 의존성을 없애기 위해서!
 
-#### Way1
+하나의 프로그램은 최대한 다른 프로그램으로부터 독립적인 것으로 만든다!
+
+불필요한 모듈은 모두 없애고 사용하기 위해!
+
+#### step1
 
 ```bash
 student@DESKTOP MINGW64 ~
@@ -79,7 +85,7 @@ $ source venv/Scripts/activate
 
 
 
-#### Way 2
+#### step 2
 
 vscode에서 설정하기
 
@@ -132,11 +138,16 @@ $ python manage.py runserver
 
 
 
+
+##### <app 만들기>
+
 이거슨... pages를 만드는 코드인데 이걸 만들어야 views등등이 자동으로 생성된다.
-.html 문서 in templates 폴더(반드시 이 이름) in pages
+.html 문서 in templates 폴더(폴더 이름은 반드시 templates여야한다.) in pages
 
 ```bash
 student@DESKTOP MINGW64 ~/django/01_django_intro
+$ django-admin startapp your_app_name
+(venv)
 $ django-admin startapp pages
 (venv)
 ```
@@ -183,3 +194,90 @@ urls.py --> views.py --templates(html) 순서로 파일을 불러온다.
    
 
    
+   
+   
+   
+   
+   
+   ### 처음부터 다시!
+   
+   1. git-bash에서 
+   
+   ```bash
+   student@DESKTOP MINGW64 /
+   $ cd ~
+   
+   student@DESKTOP MINGW64 ~
+   $ cd django/
+   
+   student@DESKTOP MINGW64 ~/django (master)
+   $ mkdir 02_django_advanced
+   
+   student@DESKTOP MINGW64 ~/django (master)
+   $ cd 02_django_advanced/
+   
+   student@DESKTOP MINGW64 ~/django/02_django_advanced (master)
+   $ python -m venv venv
+   
+   student@DESKTOP MINGW64 ~/django/02_django_advanced (master)
+   $ source venv/Scripts/activate
+   (venv)
+   student@DESKTOP MINGW64 ~/django/02_django_advanced (master)
+   $ pip install django
+   
+   student@DESKTOP MINGW64 ~/django/02_django_advanced (master)
+   $ django-admin startproject django_ad(파일이름) .
+   (venv)
+   student@DESKTOP MINGW64 ~/django/02_django_advanced (master)
+   $ ls
+   django_ad/  manage.py*  venv/
+   (venv)
+   student@DESKTOP MINGW64 ~/django/02_django_advanced (master)
+   $ code .
+   (venv)
+   ```
+   
+   2. vs code열리면 그 안에서
+      F1 --> Python: Select Interpreter --> ('venv':venv) --> 터미널 창 껏다가 다시 키기
+   
+   
+   
+   3. 다시 git-bash 에서
+   
+   ```
+   student@DESKTOP MINGW64 ~/django/02_django_advanced (master)
+   $ django-admin startapp pages
+   (venv)
+   
+   ```
+   
+   
+   
+   gitbash와 vscode의 bash가 서로 공유되지 않기 때문에 설정을 각기 해주어야한다.
+
+
+
+
+
+### 다시 한 번 새로운 프로젝트 시작
+
+```
+1. 환경설정
+$ python -m venv venv
+```
+
+2. f1 --> python select interpreter --> venv --> 터미널 창 껏다가 키기
+
+3. gitignore생성
+
+```
+4. 
+$ pip install django
+
+5.프로젝트 시작
+$ django-admin startproject board .
+
+6.앱추가
+$ django-admin startapp todos
+```
+
